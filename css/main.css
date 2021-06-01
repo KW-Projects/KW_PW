@@ -1,0 +1,23 @@
+/* Space out content a bit */
+body {
+  background-color: rgba(0, 0, 0, 1);
+
+}
+
+.main {
+  padding-right: 15px;
+  padding-left: 15px;
+  text-opacity: 1;
+  color: rgba(201,219,76);
+}
+
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
