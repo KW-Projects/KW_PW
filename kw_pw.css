@@ -1,0 +1,12 @@
+/* Space out content a bit */
+body {
+  background-color: rgba(0, 0, 0, 1);
+
+}
+
+.main {
+  padding-right: 15px;
+  padding-left: 15px;
+  text-opacity: 1;
+  color: rgba(219,219,219);
+}
