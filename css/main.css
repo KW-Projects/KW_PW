@@ -1,7 +1,8 @@
 /* Space out content a bit */
 body {
   background-color: rgba(0, 0, 0, 1);
-
+  font-size: .781rem;
+  font-family: Source Code Pro,monospace;
 }
 
 .main {
