@@ -3,6 +3,7 @@ body {
   background-color: rgba(0, 0, 0, 1);
   font-size: .781rem;
   font-family: Source Code Pro,monospace;
+  line-height: 1.5;
 }
 
 .main {
@@ -13,7 +14,7 @@ body {
 }
 
 
-/* Customize container */
+/* Customize container
 @media (min-width: 768px) {
   .container {
     max-width: 730px;
@@ -21,4 +22,26 @@ body {
 }
 .container-narrow > hr {
   margin: 30px 0;
+}
+
+*/
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.max-w-xl {
+    max-width: 40.5rem;
+}
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.h-screen {
+    height: 100vh;
+}
+.flex-col {
+    flex-direction: column;
+}
+.flex {
+    display: flex;
 }
