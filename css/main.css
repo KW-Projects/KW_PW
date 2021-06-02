@@ -1,10 +1,9 @@
 /* Space out content a bit */
 body {
+  background-color: rgba(0, 0, 0, 1);
   font-size: .781rem;
   font-family: Source Code Pro,monospace;
   line-height: 1.5;
-  background-color: rgba(0, 0, 0, 1)
-  ;
 }
 
 .main {
