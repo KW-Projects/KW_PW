@@ -1,10 +1,10 @@
 /* Space out content a bit */
 body {
-  --tw-text-opacity: 1;
-  color: rgba(219,219,219,var(--tw-text-opacity));
   font-size: .781rem;
   font-family: Source Code Pro,monospace;
   line-height: 1.5;
+  background-color: rgba(0, 0, 0, 1)
+  ;
 }
 
 .main {
