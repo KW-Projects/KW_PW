@@ -19,7 +19,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet"> 
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
 <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_d73d20ed8f583b0b4f686c8e65ac12"></script>
+
+<script>
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
 </head>
 
 <body>
@@ -29,7 +40,7 @@
 
         <p>My first paragraph.</p>
 
-	<table>
+	<table id="myTable">
 
 <tr>
 <td>3736951</td>
