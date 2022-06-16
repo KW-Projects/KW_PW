@@ -35,7 +35,7 @@
         function myFunction() {
             var wallet = { "wallet_id": document.getElementById("wallet").value };
 
-            Radar.setMetadata(JSON.parse(wallet));
+            Radar.setMetadata(wallet);
             //Radar.setUserId(document.getElementById("wallet").value);
             Radar.trackOnce(function (err, result) {
                 if (!err) {
