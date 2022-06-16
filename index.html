@@ -23,6 +23,9 @@
     <div class="container">
         <h1>Geofence game</h1>
 
+        Enter your wallet address: <input type="text" id="wallet" value="0xBe78eA069F94b6f537BF9476dD8Dda43CF8402Dd">
+
+
         <button onclick="myFunction()">check in to geofence</button>
         <p id="country"></p>
 
@@ -30,11 +33,12 @@
 
     <script type="text/javascript">
         function myFunction() {
+            Radar.setUserId(document.getElementById("wallet").value);
             Radar.trackOnce(function (err, result) {
                 if (!err) {
                     if (result) {
 
-                        document.getElementById("country").innerHTML = "Your country is " + JSON.stringify(result.events);
+                        document.getElementById("country").innerHTML = "Your country is " + JSON.stringify(result.events) + " and your wallet address is " + document.getElementById("wallet").value;
                     }
                 }
             });
