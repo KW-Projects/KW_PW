@@ -33,7 +33,7 @@
 
     <script type="text/javascript">
         function myFunction() {
-            var wallet = '{"wallet_id":' + document.getElementById("wallet").value + '}'
+            var wallet = { "wallet_id": document.getElementById("wallet").value };
 
             Radar.setMetadata(JSON.parse(wallet));
             //Radar.setUserId(document.getElementById("wallet").value);
