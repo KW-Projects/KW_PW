@@ -21,9 +21,9 @@
 
 <body>
     <div class="container">
-        <h1>My First Heading</h1>
+        <h1>Geofence game</h1>
 
-        <button onclick="myFunction()">Click me</button>
+        <button onclick="myFunction()">check in to geofence</button>
         <p id="country"></p>
 
     </div>
@@ -34,7 +34,7 @@
                 if (!err) {
                     if (result) {
 
-                        document.getElementById("country").innerHTML = "Your country is " + result.location;
+                        document.getElementById("country").innerHTML = "Your country is " + JSON.stringify(result.events);
                     }
                 }
             });
