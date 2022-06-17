@@ -29,6 +29,7 @@
             font: 400 15px Lato, sans-serif;
             line-height: 1.8;
             color: #818181;
+            background-color: #000000;
         }
 
         h2 {
@@ -48,7 +49,7 @@
         }
 
         .jumbotron {
-            background-color: #f4511e;
+            background-color: #000000;
             color: #fff;
             padding: 100px 25px;
             font-family: Montserrat, sans-serif;
@@ -252,7 +253,7 @@
 
     <div class="jumbotron text-center">
         <h1>geocache game</h1>
-        <p>check in for cash</p>
+        <p id="check_in_result"></p>
         <form>
             <div class="input-group">
                 <input type="text" class="form-control" size="50" id="wallet" value="0xBe78eA069F94b6f537BF9476dD8Dda43CF8402Dd" required>
@@ -278,9 +279,9 @@
                             let entered_geo = result_string.search("user.entered_geofence");
 
                             if (entered_geo != -1) {
-                                document.getElementById("country").innerHTML = "Congrats, you're getting cash sent to " + document.getElementById("wallet").value;
+                                document.getElementById("check_in_result").innerHTML = "Congrats, you're getting cash sent to " + document.getElementById("wallet").value;
                             } else {
-                                document.getElementById("country").innerHTML = "Sorry, you need to find and check into a geofence!";
+                                document.getElementById("check_in_result").innerHTML = "Sorry, you need to find and check into a geofence!";
                             }
 
                         }
