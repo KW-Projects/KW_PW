@@ -64,12 +64,12 @@
         }
 
         .logo-small {
-            color: #f4511e;
+            color: #000000;
             font-size: 50px;
         }
 
         .logo {
-            color: #f4511e;
+            color: #000000;
             font-size: 200px;
         }
 
@@ -87,15 +87,15 @@
 
         .carousel-control.right, .carousel-control.left {
             background-image: none;
-            color: #f4511e;
+            color: #000000;
         }
 
         .carousel-indicators li {
-            border-color: #f4511e;
+            border-color: #000000;
         }
 
             .carousel-indicators li.active {
-                background-color: #f4511e;
+                background-color: #000000;
             }
 
         .item h4 {
@@ -111,7 +111,7 @@
         }
 
         .panel {
-            border: 1px solid #f4511e;
+            border: 1px solid #000000;
             border-radius: 0 !important;
             transition: box-shadow 0.5s;
         }
@@ -121,14 +121,14 @@
             }
 
         .panel-footer .btn:hover {
-            border: 1px solid #f4511e;
+            border: 1px solid #000000;
             background-color: #fff !important;
-            color: #f4511e;
+            color: #000000;
         }
 
         .panel-heading {
             color: #fff !important;
-            background-color: #f4511e !important;
+            background-color: #000000 !important;
             padding: 25px;
             border-bottom: 1px solid transparent;
             border-top-left-radius: 0px;
@@ -152,13 +152,13 @@
 
             .panel-footer .btn {
                 margin: 15px 0;
-                background-color: #f4511e;
+                background-color: #000000;
                 color: #fff;
             }
 
         .navbar {
             margin-bottom: 0;
-            background-color: #f4511e;
+            background-color: #000000;
             z-index: 9999;
             border: 0;
             font-size: 12px !important;
@@ -173,7 +173,7 @@
             }
 
         .navbar-nav li a:hover, .navbar-nav li.active a {
-            color: #f4511e !important;
+            color: #000000 !important;
             background-color: #fff !important;
         }
 
@@ -185,7 +185,7 @@
         footer .glyphicon {
             font-size: 20px;
             margin-bottom: 20px;
-            color: #f4511e;
+            color: #000000;
         }
 
         .slideanim {
@@ -253,15 +253,16 @@
 
     <div class="jumbotron text-center">
         <h1>geocache game</h1>
-        <p id="check_in_result"></p>
+
         <form>
             <div class="input-group">
                 <input type="text" class="form-control" size="50" id="wallet" value="0xBe78eA069F94b6f537BF9476dD8Dda43CF8402Dd" required>
-                <div class="input-group-btn">
-                    <button type="button" class="btn btn-danger" onclick="myFunction()">Check in to geofence</button>
-                </div>
+            </div>
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-danger" onclick="myFunction()">Check in to geofence</button>
             </div>
         </form>
+        <p id="check_in_result"></p>
     </div>
 
     <script type="text/javascript">
