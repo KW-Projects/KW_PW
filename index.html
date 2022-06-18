@@ -266,7 +266,7 @@
     <div class="jumbotron text-center">
         <h1>Cash Cache</h1>
         
-        <input type="text" class="form-control" size="50" id="wallet" placeholder="Enter a wallet address to claim cache" required>
+        <input type="text" class="form-control" size="50" id="wallet" placeholder="Enter a wallet address to claim cache">
         <button type="button" class="btn btn-danger" onclick="myFunction()">Check my location</button>
 
         <p id="check_in_result"></p>
@@ -286,14 +286,15 @@
                         if (result) {
                             //let result_string = JSON.stringify(result.events);
                             let result_string = JSON.stringify(result);
-                            let entered_geo = result_string.search("user.entered_geofence");
+                            document.getElementById("check_in_result").innerHTML = result_string;
+                            //let entered_geo = result_string.search("user.entered_geofence");
 
-                            if (entered_geo != -1) {
-                                document.getElementById("check_in_result").innerHTML = "Congrats, you're getting cash sent to " + document.getElementById("wallet").value;
-                            } else {
+                            //if (entered_geo != -1) {
+                            //    document.getElementById("check_in_result").innerHTML = "Congrats, you're getting cash sent to " + document.getElementById("wallet").value;
+                            //} else {
                                 //document.getElementById("check_in_result").innerHTML = "Sorry, you haven't found a geocache yet!";
-                                document.getElementById("check_in_result").innerHTML = result_string;
-                            }
+                            //    document.getElementById("check_in_result").innerHTML = result_string;
+                            //}
 
                         }
                     }
