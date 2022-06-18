@@ -297,7 +297,7 @@
                             } else {
                                 document.getElementById("check_in_result").innerHTML = "Sorry, you haven't found a geocache yet!";
                                 document.getElementById("check_in_result_teaser").innerHTML = "but, here's a few clues...";
-                                document.getElementById("check_in_result_clue1").innerHTML = result.location.latitude;
+                                document.getElementById("check_in_result_clue1").innerHTML = JSON.stringify(result.location);
                             }
 
                         }
