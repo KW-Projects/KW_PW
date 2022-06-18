@@ -284,13 +284,15 @@
                 Radar.trackOnce(function (err, result) {
                     if (!err) {
                         if (result) {
-                            let result_string = JSON.stringify(result.events);
+                            //let result_string = JSON.stringify(result.events);
+                            let result_string = JSON.stringify(result);
                             let entered_geo = result_string.search("user.entered_geofence");
 
                             if (entered_geo != -1) {
                                 document.getElementById("check_in_result").innerHTML = "Congrats, you're getting cash sent to " + document.getElementById("wallet").value;
                             } else {
-                                document.getElementById("check_in_result").innerHTML = "Sorry, you need to find a geofence to check into!";
+                                //document.getElementById("check_in_result").innerHTML = "Sorry, you haven't found a geocache yet!";
+                                document.getElementById("check_in_result").innerHTML = ;
                             }
 
                         }
