@@ -302,10 +302,13 @@
                                         let closest_geofence = result.geofences;
 
                                         if (JSON.stringify(closest_geofence) != '[]') {
+                                            let nearby_geofence_lat = result.geofences.geometryCenter.coordinates[0];
+                                            //let nearby_geofence_lon = result.location.longitude;
+
                                             document.getElementById("check_in_result").innerHTML = "Sorry, you haven't found a geocache yet!";
                                             document.getElementById("check_in_result_teaser").innerHTML = "But, here's a few clues...";
                                             document.getElementById("check_in_result_clue1").innerHTML = JSON.stringify(closest_geofence);
-                                            //document.getElementById("check_in_result_clue1").innerHTML = full_result;
+                                            document.getElementById("check_in_result_clue2").innerHTML = nearby_geofence_lat;
                                         } else {
                                             document.getElementById("check_in_result").innerHTML = "Sorry, you haven't found a geocache yet and there are none nearby!";
                                   
