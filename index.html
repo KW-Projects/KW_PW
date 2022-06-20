@@ -309,8 +309,9 @@
 
                                             document.getElementById("check_in_result").innerHTML = "Sorry, you haven't found a geocache yet!";
                                             document.getElementById("check_in_result_teaser").innerHTML = "But, here's a few clues...";
-                                            document.getElementById("check_in_result_clue1").innerHTML = JSON.stringify(closest_geofence);
-                                            //document.getElementById('hint_image').src = result.geofences.metadata.hint;                                            //document.getElementById("check_in_result_clue1").innerHTML = nearby_geofence_lat;
+                                            document.getElementById("check_in_result_clue1").innerHTML = JSON.stringify(result.geofences.metadata.hint);
+                                            //document.getElementById('hint_image').src = result.geofences.metadata.hint;                                            
+                                            //document.getElementById("check_in_result_clue1").innerHTML = nearby_geofence_lat;
                                             
                                         } else {
                                             document.getElementById("check_in_result").innerHTML = "Sorry, you haven't found a geocache yet and there are none nearby!";
