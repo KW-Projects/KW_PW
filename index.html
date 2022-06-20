@@ -288,16 +288,24 @@
                     if (!err) {
                         if (result) {
                             let result_string = JSON.stringify(result.events);
-                            
+                            let lat = result.location.latitude;
+                            let lon = result.location.longitude;
                             
                             let entered_geo = result_string.search("user.entered_geofence");
 
                             if (entered_geo != -1) {
                                 document.getElementById("check_in_result").innerHTML = "Congrats, you're getting cash sent to " + document.getElementById("wallet").value;
                             } else {
+                                Radar.searchGeofences({ radius: 1000, limit: 1 }, function (err, result) {
+                                    if (!err) {    // do something with result.geofences 
+                                        let closest_geofence = result.geofences;
+                                    }
+                                });
+
+
                                 document.getElementById("check_in_result").innerHTML = "Sorry, you haven't found a geocache yet!";
-                                document.getElementById("check_in_result_teaser").innerHTML = "but, here's a .few clues...";
-                                document.getElementById("check_in_result_clue1").innerHTML = result.location.latitude;
+                                document.getElementById("check_in_result_teaser").innerHTML = "But, here's a few clues...";
+                                document.getElementById("check_in_result_clue1").innerHTML = JSON.stringify(closest_geofence);
                             }
 
                         }
