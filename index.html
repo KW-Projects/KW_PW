@@ -296,16 +296,17 @@
                             if (entered_geo != -1) {
                                 document.getElementById("check_in_result").innerHTML = "Congrats, you're getting cash sent to " + document.getElementById("wallet").value;
                             } else {
-                                Radar.searchGeofences({ radius: 1000, limit: 1 }, function (err, result) {
+                                Radar.searchGeofences({ radius: 10000, limit: 1 }, function (err, result) {
                                     if (!err) {    // do something with result.geofences 
                                         let closest_geofence = result.geofences;
+
+                                        document.getElementById("check_in_result").innerHTML = "Sorry, you haven't found a geocache yet!";
+                                        document.getElementById("check_in_result_teaser").innerHTML = "But, here's a few clues...";
+                                        document.getElementById("check_in_result_clue1").innerHTML = JSON.stringify(closest_geofence);
                                     }
                                 });
 
 
-                                document.getElementById("check_in_result").innerHTML = "Sorry, you haven't found a geocache yet!";
-                                document.getElementById("check_in_result_teaser").innerHTML = "But, here's a few clues...";
-                                document.getElementById("check_in_result_clue1").innerHTML = JSON.stringify(closest_geofence);
                             }
 
                         }
