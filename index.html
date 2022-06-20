@@ -287,6 +287,7 @@
                 Radar.trackOnce(function (err, result) {
                     if (!err) {
                         if (result) {
+                            let full_result = JSON.stringify(result);
                             let result_string = JSON.stringify(result.events);
                             let lat = result.location.latitude;
                             let lon = result.location.longitude;
@@ -304,7 +305,7 @@
                                         document.getElementById("check_in_result").innerHTML = "Sorry, you haven't found a geocache yet!";
                                         document.getElementById("check_in_result_teaser").innerHTML = "But, here's a few clues...";
                                         //document.getElementById("check_in_result_clue1").innerHTML = JSON.stringify(closest_geofence);
-                                        document.getElementById("check_in_result_clue1").innerHTML = result_string;
+                                        document.getElementById("check_in_result_clue1").innerHTML = full_result;
                                     }
                                 });
 
