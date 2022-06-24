@@ -310,7 +310,8 @@
                                             Radar.getDistance({
                                                 origin: { latitude: lat, longitude: lon },
                                                 destination: { latitude: nearby_geofence_lat, longitude: nearby_geofence_lon },
-                                                modes: ['foot'], units: 'imperial'
+                                                modes: 'foot',
+                                                units: 'imperial'
                                             },
                                                 function (err, distance_result) {
                                                     if (!err) {    // do something with result.routes 
