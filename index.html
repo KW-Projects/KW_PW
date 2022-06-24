@@ -302,10 +302,10 @@
                                         
                                         if (JSON.stringify(geofence_result.geofences) != '[]') {
                                             //let nearby_geofence_lat = result.geofences.geometryCenter.coordinates[0];
-                                            //let nearby_geofence_lon = result.location.longitude;
-                                            let geofenses = JSON.parse(geofence_result.geofences);
+                                            let nearby_geofence_lon = geofence_result.createdAt;
+                                            //let geofenses = JSON.parse(geofence_result.geofences);
                                             
-                                            let hint = geofenses.metadata.hint;
+                                            let hint = geofence_result.metadata.hint;
                                             
 
                                             document.getElementById("check_in_result").innerHTML = "Sorry, you haven't found a geocache yet!";
