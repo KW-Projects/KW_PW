@@ -297,18 +297,20 @@
                             if (entered_geo != -1) {
                                 document.getElementById("check_in_result").innerHTML = "Congrats, you're getting cash sent to " + document.getElementById("wallet").value;
                             } else {
-                                Radar.searchGeofences({ radius: 10000, limit: 1 }, function (err, geofence_result) {
+                                Radar.searchGeofences({ radius: 1000, limit: 1 }, function (err, geofence_result) {
                                     if (!err) {    // do something with result.geofences 
                                         
                                         if (JSON.stringify(geofence_result.geofences) != '[]') {
                                             //let nearby_geofence_lat = result.geofences.geometryCenter.coordinates[0];
                                             //let nearby_geofence_lon = result.location.longitude;
+                                            let geofenses = JSON.parse(geofence_result.geofences);
                                             
+                                            let hint = geofenses.metadata.hint;
                                             
 
                                             document.getElementById("check_in_result").innerHTML = "Sorry, you haven't found a geocache yet!";
                                             document.getElementById("check_in_result_teaser").innerHTML = "But, here's a few clues...";
-                                            document.getElementById("check_in_result_clue1").innerHTML = JSON.stringify(geofence_result.geofences);
+                                            document.getElementById("check_in_result_clue1").innerHTML = hint;
                                             document.getElementById('hint_image').src = "https://i.redd.it/flqhdtmrum691.png"
                                             //document.getElementById("check_in_result_clue1").innerHTML = nearby_geofence_lat;
                                             
