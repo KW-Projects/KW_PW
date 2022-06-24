@@ -306,11 +306,22 @@
                                             //let geofenses = JSON.parse(geofence_result.geofences);
                                             
                                             let hint_img = geofence_result.geofences[0].metadata.hint;
-                                            
+
+                                            Radar.getDistance({
+                                                origin: { latitude: lat, longitude: lon },
+                                                destination: { latitude: nearby_geofence_lat, longitude: nearby_geofence_lon },
+                                                modes: ['foot'], units: 'imperial'
+                                            },
+                                                function (err, distance_result) {
+                                                    if (!err) {    // do something with result.routes 
+                                                        let distance = distance_result.routes
+                                                }
+                                            });
+
 
                                             document.getElementById("check_in_result").innerHTML = "Sorry, you haven't found a geocache yet!";
                                             document.getElementById("check_in_result_teaser").innerHTML = "But, here's a few clues...";
-                                            document.getElementById("check_in_result_clue1").innerHTML = hint_img;
+                                            document.getElementById("check_in_result_clue1").innerHTML = JSON.stringify(distance);
                                             document.getElementById('hint_image').src = hint_img;
                                             //document.getElementById("check_in_result_clue1").innerHTML = nearby_geofence_lat;
                                             
